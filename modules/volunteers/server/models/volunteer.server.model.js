@@ -28,7 +28,37 @@ var VolunteerSchema = new Schema({
     required: 'Please enter the event leader name',
     trim: true
   },
-  
+  location: {
+    type: String,
+    default: '',
+    required: 'Please enter the address of the event',
+    trim: true
+  },
+  startDate: {
+    type: Date
+  },
+  endDate: {
+    type: Date
+  },
+  numberNeeded: {
+    type: Number,
+    default: 1
+  },
+  volunteers: [
+  {user: Schema.ObjectId}
+  ],
+  isActive: {
+    type: Boolean,
+    default: true
+  },
+  createdOn: {
+    type: Date,
+    default: Date.now
+  },
+  createdBy: {
+    type: Schema.ObjectId,
+    ref: 'User'
+  }
 });
 
 mongoose.model('Volunteer', VolunteerSchema);
