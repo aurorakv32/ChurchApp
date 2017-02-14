@@ -1,19 +1,19 @@
 <section>
   <div class="page-header">
-    <h1>Groups</h1>
+    <h1>Small Groups</h1>
   </div>
   <div class="list-group">
     <a ng-repeat="group in vm.groups"
        ui-sref="groups.view({ groupId: group._id })"
        class="list-group-item">
+      <h4 class="list-group-item-heading" ng-bind="group.name"></h4>
       <small class="list-group-item-text">
         Posted on
         <span ng-bind="group.created | date:'mediumDate'"></span>
         by
         <span ng-if="group.user" ng-bind="group.user.displayName"></span>
-        <span ng-if="!group.user">Deleted User</span>
+        <span ng-if="!group.user">Admin Office</span>
       </small>
-      <h4 class="list-group-item-heading" ng-bind="group.name"></h4>
     </a>
   </div>
   <div class="alert alert-warning text-center" ng-if="vm.groups.$resolved && !vm.groups.length">

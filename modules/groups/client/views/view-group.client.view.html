@@ -1,6 +1,9 @@
 <section>
   <div class="page-header">
     <h1 ng-bind="vm.group.name"></h1>
+    <h3 ng-bind="vm.group.members"></h3>
+    <h3 ng-bind="vm.group.location"></h3>
+    <h3 ng-bind="vm.group.when"></h3>
   </div>
   <div class="pull-right"
        ng-show="vm.group.isCurrentUserOwner">
@@ -19,7 +22,7 @@
       by
       <span ng-if="vm.group.user"
             ng-bind="vm.group.user.displayName"></span>
-      <span ng-if="!vm.group.user">Deleted User</span>
+      <span ng-if="!vm.group.user">Admin Office</span>
     </em>
   </small>
   <p class="lead" ng-bind="vm.group.content"></p>

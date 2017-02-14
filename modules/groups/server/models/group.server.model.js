@@ -13,8 +13,20 @@ var GroupSchema = new Schema({
   name: {
     type: String,
     default: '',
-    required: 'Please fill Group name',
+    required: "Please enter the group leader's name",
     trim: true
+  },
+  members: {
+    type: String,
+    required: 'Please enter at least one group member name'
+  },
+  location: {
+    type: String,
+    default: 'Rock Point Church'
+  },
+  when: {
+    type: String,
+    default: 'Sundays at 5PM'
   },
   created: {
     type: Date,
