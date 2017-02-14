@@ -18,7 +18,7 @@ var MemberSchema = new Schema({
   },
   spouseName: {
     type: String,
-    default: 'Single',
+    default: 'No Spouse',
   },
   numKids: {
     type: Number,
@@ -26,7 +26,11 @@ var MemberSchema = new Schema({
   },
   kidsNames: {
     type: String,
-    default: 'None'
+    default: 'N/A'
+  },
+  becameMember: {
+    type: Date,
+    default: Date.now
   },
   created: {
     type: Date,
