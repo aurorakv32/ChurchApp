@@ -1,19 +1,20 @@
 <section>
   <div class="page-header">
-    <h1>Volunteers</h1>
+    <h1>Volunteer Events</h1>
   </div>
   <div class="list-group">
     <a ng-repeat="volunteer in vm.volunteers"
        ui-sref="volunteers.view({ volunteerId: volunteer._id })"
        class="list-group-item">
+      <h4 class="list-group-item-heading" ng-bind="volunteer.title"></h4>
       <small class="list-group-item-text">
         Posted on
         <span ng-bind="volunteer.created | date:'mediumDate'"></span>
         by
         <span ng-if="volunteer.user" ng-bind="volunteer.user.displayName"></span>
-        <span ng-if="!volunteer.user">Deleted User</span>
+        <span ng-if="!volunteer.user">Admin Office</span>
       </small>
-      <h4 class="list-group-item-heading" ng-bind="volunteer.name"></h4>
+
     </a>
   </div>
   <div class="alert alert-warning text-center" ng-if="vm.volunteers.$resolved && !vm.volunteers.length">

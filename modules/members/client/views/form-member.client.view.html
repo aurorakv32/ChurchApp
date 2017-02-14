@@ -26,7 +26,7 @@
         </div>
         <div class="form-group" show-errors>
           <label class="control-label" for="name">Became a Member:</label>
-          <input name="name" type="number" ng-model="vm.member.becameMember" id="name" class="form-control" placeholder="MM/DD/YYYY">
+          <input name="name" type="Date" ng-model="vm.member.becameMember" id="name" class="form-control" placeholder="MM/DD/YYYY">
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-default">{{vm.member._id ? 'Update' : 'Create'}}</button>

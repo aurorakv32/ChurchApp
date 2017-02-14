@@ -1,16 +1,43 @@
 <section>
   <div class="page-header">
-    <h1>{{vm.volunteer._id ? 'Edit Volunteer' : 'New Volunteer'}}</h1>
+    <h1>{{vm.volunteer._id ? 'Edit Volunteer' : 'New Volunteer Event'}}</h1>
   </div>
   <div class="col-md-12">
     <form name="vm.form.volunteerForm" class="form-horizontal" ng-submit="vm.save(vm.form.volunteerForm.$valid)" novalidate>
       <fieldset>
+      <!-- Name of Event -->
         <div class="form-group" show-errors>
-          <label class="control-label" for="name">Name</label>
-          <input name="name" type="text" ng-model="vm.volunteer.name" id="name" class="form-control" placeholder="Name" required>
+          <label class="control-label" for="name">Name of Event</label>
+          <input name="name" type="text" ng-model="vm.volunteer.title" id="name" class="form-control" placeholder="Name of Event" required>
           <div ng-messages="vm.form.volunteerForm.name.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Volunteer name is required.</p>
+            <p class="help-block error-text" ng-message="required">Event name is required.</p>
           </div>
+        </div>
+      <!-- Name of Event Leader -->
+        <div class="form-group" show-errors>
+          <label class="control-label" for="eventLeader">Event Leader</label>
+          <input name="name" type="text" ng-model="vm.volunteer.eventLeader" id="name" class="form-control" placeholder="Name of Leader" required>
+          <div ng-messages="vm.form.volunteerForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Event Leader is required.</p>
+          </div>
+        </div>
+      <!-- Event Description -->
+        <div class="form-group" show-errors>
+          <label class="control-label" for="description">Event Description</label>
+          <input name="name" type="text" ng-model="vm.volunteer.description" id="name" class="form-control" placeholder="Event Description" required>
+          <div ng-messages="vm.form.volunteerForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Event Description is required.</p>
+          </div>
+        </div>
+      <!-- Location -->
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">Where</label>
+          <input name="name" type="text" ng-model="vm.volunteer.location" id="name" class="form-control" placeholder="Event Location">
+        </div>
+      <!-- Date and Time -->
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">Event Date and Time</label>
+          <input name="name" type="Date" ng-model="vm.volunteer.when" id="name" class="form-control" placeholder="Event Date and Time">
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-default">{{vm.volunteer._id ? 'Update' : 'Create'}}</button>
