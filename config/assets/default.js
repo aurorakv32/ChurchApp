@@ -4,12 +4,9 @@ module.exports = {
   client: {
     lib: {
       css: [
-        'public/theme/css/animate.css',
-        'public/theme/css/bootstrap.css',
-        'public/theme/css/cardio.css',
-        'public/theme/css/et-icons.css',
-        'public/theme/css/normalize.css',
-        'public/theme/css/owl.css'
+        'public/lib/bootstrap/dist/css/bootstrap.css',
+        'public/lib/bootstrap/dist/css/bootstrap-theme.css'
+
       ],
       js: [
         'public/lib/angular/angular.js',
@@ -26,7 +23,6 @@ module.exports = {
     },
     css: [
       'modules/*/client/css/*.css',
-      'public/theme/**/css/*.css'
     ],
     less: [
       'modules/*/client/less/*.less'
