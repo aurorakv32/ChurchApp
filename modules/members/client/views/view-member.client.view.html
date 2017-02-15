@@ -4,12 +4,13 @@
     <h3 ng-bind="vm.member.name"></h3>
     <h1>Spouse Name:</h1>
     <h3 ng-bind="vm.member.spouseName"></h3>
-    <h1>Number of Kids:</h1>
-    <h3 ng-bind="vm.member.numKids"></h3>
-    <h1>Kids Names:</h1>
+    <h1>Kid(s) Name(s):</h1>
     <h3 ng-bind="vm.member.kidsNames"></h3> 
     <h1>Became a member on:</h1>
-    <h3 ng-bind="vm.member.becameMember"></h3>
+    <h3 ng-bind="vm.member.becameMember | date:'mediumDate'"></h3>
+
+
+
   </div>
   <div class="pull-right"
        ng-show="vm.member.isCurrentUserOwner">
