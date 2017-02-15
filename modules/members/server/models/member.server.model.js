@@ -24,6 +24,10 @@ var MemberSchema = new Schema({
     type: String,
     default: 'N/A'
   },
+  kidsAge: {
+    type: Number,
+    required: 'Please enter an age'
+  },
   becameMember: {
     type: Date,
     default: Date.now
@@ -39,3 +43,4 @@ var MemberSchema = new Schema({
 });
 
 mongoose.model('Member', MemberSchema);
+

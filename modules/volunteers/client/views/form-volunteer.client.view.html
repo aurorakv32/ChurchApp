@@ -43,7 +43,7 @@
       <!-- Start Date -->
         <div class="form-group" show-errors>
           <label class="control-label" for="description">Event Start Date</label>
-          <input name="name" type="text" ng-model="vm.volunteer.startDate" id="name" class="form-control" placeholder="Event Description" required>
+          <input name="name" type="Date" ng-model="vm.volunteer.startDate" id="name" class="form-control" placeholder="Event Description" required>
           <div ng-messages="vm.form.volunteerForm.name.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Event start date is required.</p>
           </div>

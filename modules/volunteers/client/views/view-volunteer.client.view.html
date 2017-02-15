@@ -7,8 +7,14 @@
     <h3 ng-bind="vm.volunteer.description"></h3>
     <h2>Where</h2>
     <h3 ng-bind="vm.volunteer.location"></h3>
-    <h2>When</h2>
-    <h3 ng-bind="vm.volunteer.when | date:'mediumDate'"></h3>
+    <h2>Start Date</h2>
+    <h3 ng-bind="vm.volunteer.startDate | date:'mediumDate'"></h3>
+    <h2>End Date</h2>
+    <h3 ng-bind="vm.volunteer.endDate | date:'mediumDate'"></h3>
+    <h2>Start Time</h2>
+    <h3 ng-bind="vm.volunteer.startTime"></h3>
+    <h2>End Time</h2>
+    <h3 ng-bind="vm.volunteer.endTime"></h3>
   </div>
   <div class="pull-right"
        ng-show="vm.volunteer.isCurrentUserOwner">
