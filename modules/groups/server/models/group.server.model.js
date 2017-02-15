@@ -13,7 +13,7 @@ var GroupSchema = new Schema({
   name: {
     type: String,
     default: '',
-    required: "Please enter the group leader's name",
+    required: 'Please enter the group leader name',
     trim: true
   },
   members: {

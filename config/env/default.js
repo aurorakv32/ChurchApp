@@ -2,9 +2,9 @@
 
 module.exports = {
   app: {
-    title: 'MEAN.JS',
-    description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
-    keywords: 'mongodb, express, angularjs, node.js, mongoose, passport',
+    title: 'Rock Point Church',
+    description: 'Our purpose is to lead people into a growing relationship with Jesus Christ. ',
+    keywords: 'Rock Point, Rockpoint, Rock Point Baptist Church, Rock Point Church, Rockpoint Church, church, Baptist, Crawfordsville, Indiana, churches Crawfordsville Indiana',
     googleAnalyticsTrackingID: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'GOOGLE_ANALYTICS_TRACKING_ID'
   },
   port: process.env.PORT || 3000,
