@@ -1,9 +1,15 @@
 <section>
   <div class="page-header">
-    <h1 ng-bind="vm.group.name"></h1>
+    <h1>Leader Name</h1>
+    <h3 ng-bind="vm.group.name"></h3>
+    <h1>Group Members</h1>
     <h3 ng-bind="vm.group.members"></h3>
+    <h1>Group Meeting Place</h1>
     <h3 ng-bind="vm.group.location"></h3>
-    <h3 ng-bind="vm.group.when"></h3>
+    <h1>Day Group Meets</h1>
+    <h3 ng-bind="vm.group.dayOfWeek"></h3>
+    <h1>Meeting Time</h1>
+    <h3 ng-bind="vm.group.time"></h3>
   </div>
   <div class="pull-right"
        ng-show="vm.group.isCurrentUserOwner">

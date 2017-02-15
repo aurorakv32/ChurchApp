@@ -24,9 +24,13 @@ var GroupSchema = new Schema({
     type: String,
     default: 'Rock Point Church'
   },
-  when: {
+  dayOfWeek: {
     type: String,
-    default: 'Sundays at 5PM'
+    default: 'Sundays'
+  },
+  time: {
+    type: String,
+    default: '5PM'
   },
   created: {
     type: Date,

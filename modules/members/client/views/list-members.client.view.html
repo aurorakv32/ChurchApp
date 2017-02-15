@@ -6,6 +6,7 @@
     <a ng-repeat="member in vm.members"
        ui-sref="members.view({ memberId: member._id })"
        class="list-group-item">
+       <h4 class="list-group-item-heading" ng-bind="member.name"></h4>
       <small class="list-group-item-text">
         Posted on
         <span ng-bind="member.created | date:'mediumDate'"></span>
@@ -13,7 +14,7 @@
         <span ng-if="member.user" ng-bind="member.user.displayName"></span>
         <span ng-if="!member.user">Deleted User</span>
       </small>
-      <h4 class="list-group-item-heading" ng-bind="member.name"></h4>
+
     </a>
   </div>
   <div class="alert alert-warning text-center" ng-if="vm.members.$resolved && !vm.members.length">

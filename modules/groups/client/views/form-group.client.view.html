@@ -4,28 +4,42 @@
   </div>
   <div class="col-md-12">
     <form name="vm.form.groupForm" class="form-horizontal" ng-submit="vm.save(vm.form.groupForm.$valid)" novalidate>
+
       <fieldset>
+    <!-- Group Name -->
         <div class="form-group" show-errors>
           <label class="control-label" for="name"> Group Leader</label>
-          <input name="name" type="text" ng-model="vm.group.name" id="name" class="form-control" placeholder="Group Leader's Name" required>
+          <input name="name" type="text" ng-model="vm.group.name" id="name" class="form-control" placeholder="Leader Name" required>
           <div ng-messages="vm.form.groupForm.name.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Leader's name is required.</p>
           </div>
         </div>
+
+    <!-- Group Members -->
         <div class="form-group" show-errors>
           <label class="control-label" for="name"> Group Members</label>
-          <input name="name" type="text" ng-model="vm.group.members" id="name" class="form-control" placeholder="Group Member Name" required>
+          <input name="name" type="text" ng-model="vm.group.members" id="name" class="form-control" placeholder="Members Names" required>
           <div ng-messages="vm.form.groupForm.name.$error" role="alert">
             <p class="help-block error-text" ng-message="required">You must add at least one member.</p>
           </div>
         </div>
+
+    <!-- Location -->    
         <div class="form-group" show-errors>
           <label class="control-label" for="name"> Group Meeting Place</label>
           <input name="name" type="text" ng-model="vm.group.location" id="name" class="form-control" placeholder="Group Meeting Place">
         </div>
+
+    <!-- Meeting Day -->
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name"> Day Group Meets</label>
+          <input name="name" type="text" ng-model="vm.group.dayOfWeek" id="name" class="form-control" placeholder="Day of the Week">
+        </div>
+
+    <!-- Meeting Time -->
         <div class="form-group" show-errors>
           <label class="control-label" for="name"> Group Meeting Time</label>
-          <input name="name" type="text" ng-model="vm.group.when" id="name" class="form-control" placeholder="Group Meeting Time">
+          <input name="name" type="text" ng-model="vm.group.time" id="name" class="form-control" placeholder="Time of Day">
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-default">{{vm.group._id ? 'Update' : 'Create'}}</button>
