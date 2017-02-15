@@ -4,7 +4,9 @@
   </div>
   <div class="col-md-12">
     <form name="vm.form.memberForm" class="form-horizontal" ng-submit="vm.save(vm.form.memberForm.$valid)" novalidate>
+
       <fieldset>
+    <!-- Member Name -->
         <div class="form-group" show-errors>
           <label class="control-label" for="name">Name</label>
           <input name="name" type="text" ng-model="vm.member.name" id="name" class="form-control" placeholder="Name" required>
@@ -12,22 +14,26 @@
             <p class="help-block error-text" ng-message="required">Member name is required.</p>
           </div>
         </div>
+
+    <!-- Spouse Name -->    
         <div class="form-group" show-errors>
           <label class="control-label" for="name">Spouse Name</label>
           <input name="name" type="text" ng-model="vm.member.spouseName" id="name" class="form-control" placeholder="Spouse Name">
         </div>
-        <div class="form-group" show-errors>
-          <label class="control-label" for="name">Number of Kids</label>
-          <input name="name" type="number" ng-model="vm.member.numKids" id="name" class="form-control" placeholder="Number of Kids">
-        </div>
+
+    <!-- Kids Names -->
         <div class="form-group" show-errors>
           <label class="control-label" for="name">Kids' Names</label>
           <input name="name" type="text" ng-model="vm.member.kidsNames" id="name" class="form-control" placeholder="Kids' Names">
         </div>
+
+    <!-- Became a member -->
         <div class="form-group" show-errors>
           <label class="control-label" for="name">Became a Member:</label>
           <input name="name" type="Date" ng-model="vm.member.becameMember" id="name" class="form-control" placeholder="MM/DD/YYYY">
         </div>
+
+        
         <div class="form-group">
           <button type="submit" class="btn btn-default">{{vm.member._id ? 'Update' : 'Create'}}</button>
         </div>
