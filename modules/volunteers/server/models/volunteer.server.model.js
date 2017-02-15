@@ -33,9 +33,22 @@ var VolunteerSchema = new Schema({
     default: 'Rock Point Church',
     trim: true
   },  
-  when: {
+  startDate: {
+    type: Date,
+    required: 'You must enter a start date.',
+    trim: true
+  }, 
+  endDate: {
     type: Date
-  },  
+  },
+  startTime: {
+    type: String,
+    required: 'Please enter a start time.'
+  },
+  endTime: {
+    type: String,
+    required: 'Please enter an end time.'
+  },
   created: {
     type: Date,
     default: Date.now
