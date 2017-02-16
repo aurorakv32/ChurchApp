@@ -19,22 +19,32 @@ var MemberSchema = new Schema({
   spouseName: {
     type: String,
     default: 'No Spouse',
+    trim: true
   },
   kidsNames: {
     type: String,
-    default: 'N/A'
+    default: 'N/A',
+    trim: true
   },
-  kidsAge: {
-    type: Number,
-    required: 'Please enter an age'
-  },
+  // kidsAge: {
+  //   type: Number,
+  //   required: 'Please enter an age',
+  //   trim: true
+  // },
   becameMember: {
     type: Date,
-    default: Date.now
+    default: Date.now,
+    trim: true
+  },
+  group: {
+    type: String,
+    default: 'None',
+    trim: true
   },
   created: {
     type: Date,
-    default: Date.now
+    default: Date.now,
+    trim: true
   },
   user: {
     type: Schema.ObjectId,

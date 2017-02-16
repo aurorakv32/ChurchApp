@@ -6,9 +6,9 @@
     .module('members')
     .controller('MembersController', MembersController);
 
-  MembersController.$inject = ['$scope', '$state', '$window', 'Authentication', 'memberResolve'];
+  MembersController.$inject = ['$scope', '$state', '$window', 'Authentication', 'memberResolve', 'GroupsService'];
 
-  function MembersController ($scope, $state, $window, Authentication, member) {
+  function MembersController ($scope, $state, $window, Authentication, member, GroupsService) {
     var vm = this;
 
     vm.authentication = Authentication;
@@ -17,6 +17,7 @@
     vm.form = {};
     vm.remove = remove;
     vm.save = save;
+    vm.group = GroupsService.query();
 
     // Remove existing Member
     function remove() {

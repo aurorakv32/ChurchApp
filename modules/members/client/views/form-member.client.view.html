@@ -33,6 +33,12 @@
           <input name="name" type="Date" ng-model="vm.member.becameMember" id="name" class="form-control" placeholder="MM/DD/YYYY">
         </div>
 
+    <!-- Small Group assignment -->
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">In a small group?</label>
+          <select name="group" type="text" ng-options="group.name as group.name for group in vm.group" ng-model="vm.member.group" id="name" class="form-control"></select>
+        </div>
+
         
         <div class="form-group">
           <button type="submit" class="btn btn-default">{{vm.member._id ? 'Update' : 'Create'}}</button>

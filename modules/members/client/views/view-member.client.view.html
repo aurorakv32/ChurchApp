@@ -10,6 +10,8 @@
     <h3 ng-bind="vm.member.kidsNames"></h3> 
     <h1>Became a member on:</h1>
     <h3 ng-bind="vm.member.becameMember | date: 'mediumDate'"></h3>
+    <h1>Small Group Leader</h1>
+    <h3 ng-bind="vm.member.group"></h3>
   </div>
   <div class="pull-right"
        ng-show="vm.member.isCurrentUserOwner">
