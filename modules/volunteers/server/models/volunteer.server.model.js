@@ -19,8 +19,7 @@ var VolunteerSchema = new Schema({
   eventLeader: {
     type: String,
     default: '',
-    required: 'Please enter the event leader name',
-    trim: true
+    required: 'Please enter the event leader name'  
   },
   description: {
     type: String,

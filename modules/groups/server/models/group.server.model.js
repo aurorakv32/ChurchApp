@@ -12,12 +12,11 @@ var mongoose = require('mongoose'),
 var GroupSchema = new Schema({
   name: {
     type: String,
-    default: '',
-    required: 'Please enter the group leader name',
-    trim: true
+    default: ''
   },
   members: {
     type: String,
+    default: '',
     required: 'Please enter at least one group member name'
   },
   location: {

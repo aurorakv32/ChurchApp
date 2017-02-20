@@ -6,9 +6,9 @@
     .module('volunteers')
     .controller('VolunteersController', VolunteersController);
 
-  VolunteersController.$inject = ['$scope', '$state', '$window', 'Authentication', 'volunteerResolve'];
+  VolunteersController.$inject = ['$scope', '$state', '$window', 'Authentication', 'volunteerResolve', 'MembersService'];
 
-  function VolunteersController ($scope, $state, $window, Authentication, volunteer) {
+  function VolunteersController ($scope, $state, $window, Authentication, volunteer, MembersService) {
     var vm = this;
 
     vm.authentication = Authentication;
@@ -17,6 +17,7 @@
     vm.form = {};
     vm.remove = remove;
     vm.save = save;
+    vm.eventLeader = MembersService.query();
 
     // Remove existing Volunteer
     function remove() {

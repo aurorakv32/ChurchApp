@@ -38,8 +38,7 @@ var MemberSchema = new Schema({
   },
   group: {
     type: String,
-    default: 'None',
-    trim: true
+    default: 'None'
   },
   created: {
     type: Date,

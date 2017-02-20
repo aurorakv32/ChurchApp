@@ -13,10 +13,11 @@
             <p class="help-block error-text" ng-message="required">Event name is required.</p>
           </div>
         </div>
+        
       <!-- Name of Event Leader -->
         <div class="form-group" show-errors>
           <label class="control-label" for="eventLeader">Event Leader</label>
-          <input name="name" type="text" ng-model="vm.volunteer.eventLeader" id="name" class="form-control" placeholder="Name of Leader" required>
+          <select name="name" type="text" ng-options="eventLeader.name as eventLeader.name for eventLeader in vm.eventLeader" ng-model="vm.volunteer.eventLeader" id="name" class="form-control"></select>
           <div ng-messages="vm.form.volunteerForm.name.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Event Leader is required.</p>
           </div>
